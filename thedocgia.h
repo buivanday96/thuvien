@@ -28,9 +28,9 @@ void Insert_TheDG(NODEPTR &p,TheDG info){
 		p->right=NULL;
 	} 
 	else{
-		if(info->maThe < p->info.maThe)
-			Insert_TheDG(p,p->left);
-		else if(info->maThe > p->info.maThe)
-			Insert_TheDG(p,p->right);
+		if(info.maThe < p->info.maThe)
+			Insert_TheDG(p,p->left->info);
+		else if(info.maThe > p->info.maThe)
+			Insert_TheDG(p,p->right->info);
 	}
 }
